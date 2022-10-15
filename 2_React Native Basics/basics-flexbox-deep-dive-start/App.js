@@ -42,6 +42,8 @@ export default function App() {
       >
         <Text>3</Text>
       </View>
+      <View></View>
+      <Text style={{ color: "blue" }}>Hello world</Text>
     </View>
   );
 }
