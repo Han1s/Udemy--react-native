@@ -4,7 +4,7 @@ import Pressable from "react-native/Libraries/Components/Pressable/Pressable";
 
 const GoalItem = (props) => {
     return (
-        <Pressable onPress={props.onDeleteItem}>
+        <Pressable onPress={() => props.onDeleteItem(props.id)}>
             <View style={styles.goalItem}>
                 <Text style={styles.goalText}>{props.text}</Text>
             </View>
