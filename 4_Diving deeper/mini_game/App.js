@@ -1,4 +1,4 @@
-import {StyleSheet, ImageBackground} from 'react-native';
+import {StyleSheet, ImageBackground, SafeAreaView, StatusBar, View} from 'react-native';
 import StartGameScreen from "./screens/StartGameScreen";
 import {LinearGradient} from "expo-linear-gradient";
 import {useState} from "react";
@@ -26,7 +26,9 @@ export default function App() {
                 style={styles.rootScreen}
                 imageStyle={styles.backgroundImage}
             >
-                {screen}
+                <View style={styles.rootScreen}>
+                    {screen}
+                </View>
             </ImageBackground>
         </LinearGradient>
     );
@@ -35,8 +37,9 @@ export default function App() {
 const styles = StyleSheet.create({
     rootScreen: {
         flex: 1,
+        paddingTop: StatusBar.currentHeight
     },
     backgroundImage: {
         opacity: 0.15
-    }
+    },
 });

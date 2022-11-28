@@ -1,5 +1,5 @@
 import React from "react";
-import {Text, View, StyleSheet} from "react-native";
+import {StyleSheet, Text, View} from "react-native";
 
 const GameScreen = () => {
     return (
@@ -21,6 +21,6 @@ export default GameScreen;
 const styles = StyleSheet.create({
     screen: {
         flex: 1,
-        padding: 12
+        paddingHorizontal: 24
     }
 })
