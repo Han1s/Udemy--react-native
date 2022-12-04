@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {Alert, StyleSheet, Text, View} from "react-native";
+import {Alert, FlatList, StyleSheet, Text, View} from "react-native";
 import Title from "../components/UI/Title";
 import NumberContainer from "../components/Game/NumberContainer";
 import PrimaryButton from "../components/UI/PrimaryButton";
@@ -83,6 +83,11 @@ const GameScreen = ({userNumber, onGameOver}) => {
                         {guessRound}
                     </Text>
                 ))}
+                <FlatList
+                    data={guessRounds}
+                    keyExtractor={(item) => item}
+                    renderItem={(itemData) => <Text>{itemData.item}</Text>}
+                />
             </View>
             {/*<View>LOG ROUNDS</View>*/}
         </View>
