@@ -13,10 +13,12 @@ const styles = StyleSheet.create({
         fontFamily: 'open-sans-bold',
         fontSize: 24,
         color: 'white',
+        width: '80%',
         textAlign: 'center',
         borderWidth: 2,
         borderColor: 'white',
-        padding: 12
+        padding: 12,
+        maxWidth: '80%'
     }
 })
 
