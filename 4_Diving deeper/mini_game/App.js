@@ -1,4 +1,4 @@
-import {StyleSheet, ImageBackground, SafeAreaView, StatusBar, View} from 'react-native';
+import {ImageBackground, StatusBar, StyleSheet, View} from 'react-native';
 import StartGameScreen from "./screens/StartGameScreen";
 import {LinearGradient} from "expo-linear-gradient";
 import {useState} from "react";
@@ -19,7 +19,7 @@ export default function App() {
     })
 
     if (!fontsLoaded) {
-        return <AppLoading />
+        return <AppLoading/>
     }
 
     const pickedNumberHandler = (pickedNumber) => {
@@ -37,7 +37,7 @@ export default function App() {
         setGuessRounds(0);
     }
 
-    let screen = <StartGameScreen onPickNumber={pickedNumberHandler} />;
+    let screen = <StartGameScreen onPickNumber={pickedNumberHandler}/>;
 
     if (userNumber) {
         screen = (
@@ -56,18 +56,21 @@ export default function App() {
     }
 
     return (
-        <LinearGradient colors={[Colors.primary700, Colors.accent500]} style={styles.rootScreen}>
-            <ImageBackground
-                source={require('./assets/images/background.png')}
-                resizeMode={"cover"}
-                style={styles.rootScreen}
-                imageStyle={styles.backgroundImage}
-            >
-                <View style={styles.rootScreen}>
-                    {screen}
-                </View>
-            </ImageBackground>
-        </LinearGradient>
+        <>
+            <StatusBar style={'light'} />
+            <LinearGradient colors={[Colors.primary700, Colors.accent500]} style={styles.rootScreen}>
+                <ImageBackground
+                    source={require('./assets/images/background.png')}
+                    resizeMode={"cover"}
+                    style={styles.rootScreen}
+                    imageStyle={styles.backgroundImage}
+                >
+                    <View style={styles.rootScreen}>
+                        {screen}
+                    </View>
+                </ImageBackground>
+            </LinearGradient>
+        </>
     );
 }
 
