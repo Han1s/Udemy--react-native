@@ -9,7 +9,10 @@ const CategoriesScreen = ({navigation}) => {
     const renderCategoryItem = (itemData) => {
         return (
             <CategoryGridTile title={itemData.item.title} color={itemData.item.color} onPress={() => {
-                navigation.navigate('MealsOverview')
+                navigation.navigate('MealsOverview', {
+                    categoryId: itemData.item.id,
+                    categoryId: itemData.item.id,
+                })
             }}/>
         )
     }
