@@ -10,7 +10,20 @@ const MealsOverviewScreen = ({ route }) => {
         return mealItem.categoryIds.includes(categoryId)
     })
 
-    const renderMealItem = (itemData) => <MealItem title={itemData.item.title} />
+    const renderMealItem = (itemData) => {
+        const item = itemData.item
+        const mealItemProps = {
+            title: item.title,
+            imageUrl: item.imageUrl,
+            affordability: item.affordability,
+            complexity: item.complexity,
+            duration: item.duration
+        }
+
+        return (
+            <MealItem {...mealItemProps} />
+        )
+    }
 
     return (
         <View style={styles.container}>
