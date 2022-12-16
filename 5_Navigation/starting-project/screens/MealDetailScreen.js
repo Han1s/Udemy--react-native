@@ -1,14 +1,26 @@
-import React from 'react';
-import {Image, ScrollView, StyleSheet, Text, View} from "react-native";
+import React, {useLayoutEffect} from 'react';
+import {Button, Image, ScrollView, StyleSheet, Text, View} from "react-native";
 import {MEALS} from "../data/dummy-data";
 import MealDetails from "../components/MealDetails";
 import Subtitle from "../components/MealDetail/Subtitle";
 import List from "../components/MealDetail/List";
 
-const MyComponent = ({route}) => {
+const MyComponent = ({route, navigation}) => {
     const mealId = route.params.mealId;
 
     const selectedMeal = MEALS.find((meal) => meal.id === mealId);
+
+    const headerButtonpresshandler = () => {
+        console.log('pressed');
+    }
+
+    useLayoutEffect(() => {
+        navigation.setOptions({
+            headerRight: () => (
+                <Button title={'tap'} onPress={headerButtonpresshandler}/>
+            )
+        })
+    }, [headerButtonpresshandler, navigation])
 
     return (
         <ScrollView style={styles.root}>
@@ -35,7 +47,7 @@ export default MyComponent;
 
 const styles = StyleSheet.create({
     root: {
-      marginBottom: 32
+        marginBottom: 32
     },
     image: {
         width: '100%',
@@ -52,7 +64,7 @@ const styles = StyleSheet.create({
         color: 'white'
     },
     listOuterContainer: {
-      alignItems: 'center'
+        alignItems: 'center'
     },
     listContainer: {
         width: '80%'
