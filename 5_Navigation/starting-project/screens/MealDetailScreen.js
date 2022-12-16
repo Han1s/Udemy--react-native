@@ -1,11 +1,12 @@
 import React, {useLayoutEffect} from 'react';
-import {Button, Image, ScrollView, StyleSheet, Text, View} from "react-native";
+import {Image, ScrollView, StyleSheet, Text, View} from "react-native";
 import {MEALS} from "../data/dummy-data";
 import MealDetails from "../components/MealDetails";
 import Subtitle from "../components/MealDetail/Subtitle";
 import List from "../components/MealDetail/List";
+import IconButton from "../components/IconButton";
 
-const MyComponent = ({route, navigation}) => {
+const MealDetailScreen = ({route, navigation}) => {
     const mealId = route.params.mealId;
 
     const selectedMeal = MEALS.find((meal) => meal.id === mealId);
@@ -17,7 +18,7 @@ const MyComponent = ({route, navigation}) => {
     useLayoutEffect(() => {
         navigation.setOptions({
             headerRight: () => (
-                <Button title={'tap'} onPress={headerButtonpresshandler}/>
+                <IconButton onPress={headerButtonpresshandler} icon={'star'} color={'white'}/>
             )
         })
     }, [headerButtonpresshandler, navigation])
@@ -43,7 +44,7 @@ const MyComponent = ({route, navigation}) => {
     );
 };
 
-export default MyComponent;
+export default MealDetailScreen;
 
 const styles = StyleSheet.create({
     root: {
