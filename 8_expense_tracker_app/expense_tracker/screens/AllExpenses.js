@@ -6,6 +6,7 @@ const AllExpenses = () => {
   const expensesContext = useContext(ExpensesContext);
   return (
     <ExpensesOutput
+      fallbackText={"No expenses registered yet"}
       expensesPeriod={"total"}
       expenses={expensesContext.expenses}
     />
