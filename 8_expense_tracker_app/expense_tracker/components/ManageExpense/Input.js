@@ -2,7 +2,7 @@ import React from "react";
 import { Text, TextInput, View, StyleSheet } from "react-native";
 import { GlobalStyles } from "../../constants/styles";
 
-const Input = ({ label, textInputConfig }) => {
+const Input = ({ label, style, textInputConfig }) => {
   const inputStyles = [styles.input];
 
   if (textInputConfig?.multiline) {
@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
   inputContainer: {
     marginHorizontal: 4,
     marginVertical: 8,
+    flex: 1,
   },
   label: {
     fontSize: 12,
