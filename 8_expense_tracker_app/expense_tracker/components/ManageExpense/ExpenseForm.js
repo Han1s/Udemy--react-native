@@ -4,6 +4,7 @@ import Input from "./Input";
 import { StyleSheet } from "react-native";
 import Button from "../UI/Button";
 import { getFormattedDate } from "../../util/date";
+import { GlobalStyles } from "../../constants/styles";
 
 const ExpenseForm = ({
   onCancel,
@@ -81,6 +82,7 @@ const ExpenseForm = ({
         <Input
           style={styles.rowInput}
           label={"Amount"}
+          invalid={!Inputs.amount.isValid}
           textInputConfig={{
             keyboardType: "decimal-pad",
             placeholder: "0.00",
@@ -91,6 +93,7 @@ const ExpenseForm = ({
         <Input
           style={styles.rowInput}
           label={"Date"}
+          invalid={!Inputs.date.isValid}
           textInputConfig={{
             keyboardType: "number-pad",
             placeholder: "YYYY-MM-DD",
@@ -100,12 +103,10 @@ const ExpenseForm = ({
           }}
         />
       </View>
-      {formIsInvalid && (
-        <Text>Invalid input values - please check the form.</Text>
-      )}
       <View style={styles.inputRow}>
         <Input
           label={"Description"}
+          invalid={!Inputs.description.isValid}
           textInputConfig={{
             multiline: true,
             value: Inputs.description.value,
@@ -113,6 +114,11 @@ const ExpenseForm = ({
           }}
         />
       </View>
+      {formIsInvalid && (
+        <Text style={styles.errorText}>
+          Invalid input values - please check the form.
+        </Text>
+      )}
       <View style={styles.buttons}>
         <Button style={styles.button} mode={"flat"} onPress={onCancel}>
           Cancel
@@ -135,6 +141,11 @@ const styles = StyleSheet.create({
   },
   form: {
     marginTop: 40,
+  },
+  errorText: {
+    textAlign: "center",
+    color: GlobalStyles.colors.error500,
+    margin: 8,
   },
   title: {
     fontSize: 18,
