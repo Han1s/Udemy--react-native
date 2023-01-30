@@ -97,9 +97,7 @@ const ExpensesContextProvider = ({ children }) => {
   const addExpense = (expenseData) => {
     dispatch({
       type: "ADD",
-      payload: {
-        expenseData,
-      },
+      payload: expenseData,
     });
   };
 

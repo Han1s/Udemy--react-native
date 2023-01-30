@@ -4,7 +4,7 @@ import Input from "./Input";
 import { StyleSheet } from "react-native";
 import Button from "../UI/Button";
 
-const ExpenseForm = ({ onCancel, onSubmit, submitButtonlabel }) => {
+const ExpenseForm = ({ onCancel, onSubmit, submitButtonLabel }) => {
   const [inputValue, setInputValues] = useState({
     amount: "",
     date: "",
@@ -70,8 +70,8 @@ const ExpenseForm = ({ onCancel, onSubmit, submitButtonlabel }) => {
         <Button style={styles.button} mode={"flat"} onPress={onCancel}>
           Cancel
         </Button>
-        <Button style={styles.button} onPress={onSubmit}>
-          {submitButtonlabel}
+        <Button style={styles.button} onPress={submitHandler}>
+          {submitButtonLabel}
         </Button>
       </View>
     </View>
