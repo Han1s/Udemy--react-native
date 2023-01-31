@@ -15,7 +15,7 @@ const ManageExpense = ({ route, navigation }) => {
 
   const selectedExpense = expensesContext.expenses.find((expense) => {
     return expense.id === editedExpenseId;
-  })
+  });
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -32,12 +32,12 @@ const ManageExpense = ({ route, navigation }) => {
     navigation.goBack();
   };
 
-  const confirmHandler = (expenseData) => {
+  const confirmHandler = async (expenseData) => {
     if (isEditing) {
       expensesContext.updateExpense(editedExpenseId, expenseData);
     } else {
-      storeExpene(expenseData);
-      expensesContext.addExpense(expenseData);
+      const id = await storeExpene(expenseData);
+      expensesContext.addExpense({ ...expenseData, id: id });
     }
     navigation.goBack();
   };
