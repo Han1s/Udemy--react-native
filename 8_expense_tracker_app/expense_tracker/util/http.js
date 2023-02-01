@@ -7,8 +7,7 @@ export const storeExpene = async (expenseData) => {
     `${BACKEND_URL}/expenses.json`,
     expenseData,
   );
-  const id = response.data.name;
-  return id;
+  return response.data.name;
 };
 
 export const fetchExpenses = async () => {
