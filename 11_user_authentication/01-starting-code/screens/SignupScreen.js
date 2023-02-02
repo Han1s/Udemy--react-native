@@ -15,8 +15,8 @@ function SignupScreen() {
       authContext.authenticate(token);
     } catch (e) {
       Alert.alert('Authentication failed', 'Could not create user.');
+      setIsAuthenticating(false);
     }
-    setIsAuthenticating(false);
   }
 
   if (isAuthenticating) {
