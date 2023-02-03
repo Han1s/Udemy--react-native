@@ -14,6 +14,7 @@ const [isAuthenticating, setIsAuthenticating] = useState(false);
     setIsAuthenticating(true);
     try {
       const token = await login(email, password);
+      console.log('token', token);
       authContext.authenticate(token);
     } catch (e) {
       Alert.alert('Authentication failed!', 'Could not log you in. Try again later.');
