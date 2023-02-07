@@ -11,6 +11,7 @@ export const storeExpene = async (expenseData) => {
 };
 
 export const fetchExpenses = async () => {
+    debugger;
     const response = await axios.get(
         `${BACKEND_URL}/expenses.json`,
     );
