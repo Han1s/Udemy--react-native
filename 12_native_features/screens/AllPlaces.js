@@ -1,10 +1,9 @@
 import React from 'react';
+import PlacesList from "../components/Places/PlacesList";
 
 const AllPlaces = () => {
     return (
-        <div>
-            
-        </div>
+        <PlacesList />
     );
 };
 
