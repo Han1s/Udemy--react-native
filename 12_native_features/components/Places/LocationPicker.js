@@ -9,11 +9,15 @@ import {
   Accuracy,
 } from "expo-location";
 import { getMapPreview } from "../../util/location";
+import { useNavigation } from "@react-navigation/native";
 
 const LocationPicker = () => {
   const [pickedLocation, setPickedLocation] = useState();
   const [locationPermissionInfo, requestPermission] =
     useForegroundPermissions();
+
+  const navigation = useNavigation();
+
   const verifyPermissions = async () => {
     if (locationPermissionInfo.status === PermissionStatus.UNDETERMINED) {
       const permissionResponse = await requestPermission();
@@ -46,7 +50,9 @@ const LocationPicker = () => {
     });
   };
 
-  const pickOnMapHandler = () => {};
+  const pickOnMapHandler = () => {
+    navigation.navigate("Map");
+  };
 
   let locationPreview = <Text>No location picked yet.</Text>;
   if (pickedLocation) {
@@ -86,7 +92,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: Colors.primary100,
     borderRadius: 4,
-    overflow: 'hidden'
+    overflow: "hidden",
   },
   actions: {
     flexDirection: "row",
