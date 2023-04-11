@@ -73,9 +73,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: Colors.primary100,
     borderRadius: 4,
+    oberflow: "hidden",
   },
   image: {
     width: "100%",
     height: "100%",
+    borderRadius: 4,
   },
 });
