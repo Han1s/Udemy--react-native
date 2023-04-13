@@ -1,26 +1,26 @@
 {
   "expo": {
-    "name": "12_native_features",
-    "slug": "12_native_features",
+    "name": "RNCourse",
+    "slug": "RNCourse",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
@@ -30,7 +30,7 @@
       [
         "expo-image-picker",
         {
-          "cameraPermission": "The app needs access to your camera in order to take photos of your favoriite places."
+          "cameraPermission": "The app needs access to your camera in order to take photos of your favorite places."
         }
       ]
     ]

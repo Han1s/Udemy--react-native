@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b4cf7ed5-6526-4f2e-a9a9-b1bc5c1c7c80" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Places/ImagePicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Places/ImagePicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Places/LocationPicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Places/LocationPicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Places/PlaceForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Places/PlaceForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Places/PlaceItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Places/PlaceItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Places/PlacesList.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Places/PlacesList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/IconButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/IconButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UI/OutlinedButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/UI/OutlinedButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants/colors.js" beforeDir="false" afterPath="$PROJECT_DIR$/constants/colors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/place.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/place.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/AddPlace.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/AddPlace.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/AllPlaces.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/AllPlaces.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/PlaceDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/PlaceDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/location.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/location.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2ONMCvnXJS76BQ4Z8OguaYShubJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b4cf7ed5-6526-4f2e-a9a9-b1bc5c1c7c80" name="Changes" comment="" />
+      <created>1681396462405</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1681396462405</updated>
+      <workItem from="1681396464282" duration="259000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
