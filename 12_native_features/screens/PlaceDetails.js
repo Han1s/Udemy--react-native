@@ -3,23 +3,42 @@ import OutlinedButton from "../components/UI/OutlinedButton";
 import { StyleSheet } from "react-native";
 import { Colors } from "../constants/colors";
 import { Image } from "react-native";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { fetchPlaceDetails } from "../util/database";
 
-const PlaceDetails = ({route}) => {
+const PlaceDetails = ({ route, navigation }) => {
+  const [fetchedPlace, setFetchedPlace] = useState();
+
   const showOnMapHandler = () => {};
 
   const selectedPlaceId = route.params.placeId;
 
   useEffect(() => {
-    
-  }, [selectedPlaceId])
+    const loadPlaceData = async () => {
+      const place = await fetchPlaceDetails(selectedPlaceId);
+      setFetchedPlace(place);
+      navigation.setOptions({
+        title: place.title,
+      });
+    };
+
+    loadPlaceData();
+  }, [selectedPlaceId]);
+
+  if (!fetchedPlace) {
+    return (
+      <View style={styles.fallback}>
+        <Text>Loading Place Data...</Text>
+      </View>
+    );
+  }
 
   return (
     <ScrollView>
-        <Image style={styles.image} />
+      <Image style={styles.image} source={{ uri: fetchedPlace.imageUri }} />
       <View style={styles.locationContainer}>
         <View style={styles.addressContainer}>
-          <Text style={styles.address}>ADDRESS</Text>
+          <Text style={styles.address}>{fetchedPlace.address}</Text>
         </View>
         <OutlinedButton icon="map" onPress={showOnMapHandler}>
           View On Map
@@ -32,6 +51,11 @@ const PlaceDetails = ({route}) => {
 export default PlaceDetails;
 
 const styles = StyleSheet.create({
+  fallback: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
   image: {
     height: "35%",
     minHeight: 300,
