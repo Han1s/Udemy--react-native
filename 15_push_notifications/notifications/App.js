@@ -15,14 +15,24 @@ Notifications.setNotificationHandler({
 
 export default function App() {
   useEffect(() => {
-    const subscription = Notifications.addNotificationReceivedListener(
+    const subscription1 = Notifications.addNotificationReceivedListener(
       (notification) => {
+        console.log('SUBSCRIPTION 1')
         console.log(JSON.stringify(notification, null, 2));
       }
     );
 
+    // When clicking on notification
+    const subscription2 = Notifications.addNotificationResponseReceivedListener((notification) => {
+        console.log('SUBSCRIPTION 2')
+        console.log(JSON.stringify(notification, null, 2));
+        const userName = notification.notification.request.content.data.userName;
+        console.log(userName);
+    });
+
     return () => {
-      subscription.remove();
+      subscription1.remove();
+      subscription2.remove();
     };
   }, []);
 
